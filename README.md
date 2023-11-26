@@ -1,9 +1,9 @@
-# Social-App-NoSQL
+# Social-Network-App
 [![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-This application was developed as a back end for an e-commerce website that uses the latest technologies and allows the user to compete with other e-commerce businesses, with the manager of an online retail company as the target user. This e-commerce application uses object-relational mapping (ORM) and has a modified back end starter code. Additionally, its working Express.js API is configured to use Sequelize as the key component to interact with the MySQL database, which consists of tables for categories, products, tags, and product tags. RESTful API routes point to each standard Create, Read, Update, and Delete (CRUD) operation to make requests on the database.
+This is an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friends list. It uses Express for routing, MongoDB database, Mongoose ODM, and Javascript Date object to format a timestamp. The seed data was created using Insomnia. 
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ This application was developed as a back end for an e-commerce website that uses
 
 #### How to install the application:
 
-- First, clone the git repository from [GitHub](https://github.com/kwaters3/E-Commerce) 
+- First, clone the git repository from [GitHub](https://github.com/kwaters3/Social-App-NoSQL) 
     - Open the clone file in VS code or in your terminal 
     - Create your` .gitignore` and `.env` files.
     - Check the `dependencies` and `dev-dependencies` that are needed on `package.json`.
@@ -49,14 +49,12 @@ This application was developed as a back end for an e-commerce website that uses
 
 - Then, install the required dependencies on the `node_modules` folder, run: `npm install`.
 
-- Then, to create your database, go to the terminal and run: `mysql -u root -p`. 
-  - Enter mysql password when prompted.
-  - Next, enter `source db/schema.sql`. 
-  - Then, to seed the database, exit out of mysql cmd line: `exit`, then run: `npm run seed`. 
+- Then, make sure `MongoDB` is installed on your computer. 
 
-- To invoke the application, run: `npm start`. The Sequelize models sync to the MySQL database when the server starts. 
+  - To invoke the application, run: `npm start`. The Mongoose models are synched to the MongoDB database when the server starts. 
+  - Connect to the MongoDB URI `mongodb://localhost:27017`. Select `social-network-api` to see `thoughts` and `users` data.
 
-- To test the application, use `Insomnia` or `Postman` (view Test section).
+- To create seed data and test the API routes, use `Insomnia` or `Postman` (view Test section).
 
 
 ## Usage
@@ -85,35 +83,39 @@ This application was developed as a back end for an e-commerce website that uses
 
 
 - [express](https://www.npmjs.com/package/express)
-- [mysql2](https://www.npmjs.com/package/mysql2)
-- [sequelize](https://www.npmjs.com/package/sequelize)
+- [mongoose](https://www.npmjs.com/package/mongoose)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [nodemon](https://www.npmjs.com/package/nodemon)
 
 ## Credits
 
-- [SQL - W3Schools](https://www.w3schools.com/sql/sql_intro.asp)
-- [MySQL - W3Schools](https://www.w3schools.com/mysql/mysql_sql.asp)
-- [Sequelize](https://sequelize.org/)
+- [MongoDB](https://www.mongodb.com/docs/manual/)
+- [MongoDB - W3Schools](https://www.w3schools.com/mongodb/)
 
 ## Tests
 
-- Begin by cloning the Repo from the [GitHub page](https://github.com/kwaters3/E-Commerce), then create a new branch to test the application.
-- Run the following `CRUD` commands in Insomnia or Postman. 
+- Begin by cloning the Repo from the [GitHub page](https://github.com/kwaters3/Social-App-NoSQL), then create a new branch to test the application.
+- Run the following `CRUD` commands in Insomnia or Postman for each category: 
 
-    - READ - `GET`
-      - localhost:3001/api/categories
-      - localhost:3001/api/products
-      - localhost:3001/api/tags
-    - Can get by `ID` by adding the # after (Example:)
-      - localhost:3001/api/categories/3
+    - `USER`
+      - Get all users: `GET /api/users`
+      - Create a user: `POST /api/users`
+      - Get user by ID: `GET /api/users/:userId`
+      - Update a user: `PUT /api/users/:userId`
+      - Delete a user: `DELETE /api/users/:userId`
+      - Add a friend: `PUT /api/users/:userId/friends/:friendId`
+      - Delete a friend: `DELETE /api/users/:userId/friends/:friendId`
       
-    - CREATE - `POST`
-      - use the same http address as above
-    - UPDATE - `PUT`
-      - use the same http address as above
-    - DELETE - `DELETE`
-      - use the same http address as above
+    - `THOUGHT`
+      - Get all thoughts: `GET /api/thoughts`
+      - Create a thought: `POST /api/thoughts`
+      - Get thought by ID: `GET /api/thoughts/:thoughtId`
+      - Update a thought: `PUT /api/thoughts/:thoughtId`
+      - Delete a thought: `DELETE /api/thoughts/:thoughtId`
+
+    - `REACTION`
+      - Add a reaction: `PUT /api/thoughts/:id/reactions`
+      - Delete a reaction: `DELETE /api/thoughts/:id/reactions`
 
 
 ## License
