@@ -102,6 +102,10 @@ This is an API for a social network web application where users can share their 
       - Update a thought: `PUT /api/thoughts/:thoughtId`
       - Delete a thought: `DELETE /api/thoughts/:thoughtId`
 
+    -  `REACTION`
+        - Add a reaction: `PUT /api/thoughts/:id/reactions`
+        - Delete a reaction: `DELETE /api/thoughts/:id/reactions`
+
 
 ## License
 
