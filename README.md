@@ -19,21 +19,15 @@ This is an API for a social network web application where users can share their 
 
 ## Visuals
 
-#### Click on the image below to reveal the video walk-through of the `installation` process:
+#### Click on the image below to reveal the video walk-through of the `installation & users-route` process:
 
-[![Screenshot](./assets/images/initial.png)](https://youtu.be/II7sBMICwN8)
+[![Screenshot](./assets/images/user.gif)](https://youtu.be/-OLtuBdQLv8)
 
-#### Click on the image below to reveal the video walk-through of the `category-routes` process:
+#### Click on the image below to reveal the video walk-through of the `friend-route, thoughts-route, & reaction-route` process:
 
-[![Screenshot](./assets/images/categories.png)](https://www.youtube.com/watch?v=L8QiW-QJldk)
+[![Screenshot](./assets/images/friend.gif)](https://www.youtube.com/watch?v=L8QiW-QJldk)
 
-#### Click on the image below to reveal the video walk-through of the `product-routes` process:
 
-[![Screenshot](./assets/images/product.png)](https://www.youtube.com/watch?v=Nw0XJGpwboc)
-
-#### Click on the image below to reveal the video walk-through of the `tags-routes` process:
-
-[![Screenshot](./assets/images/tag.png)](https://www.youtube.com/watch?v=MpVxpb3susg)
 
 
 
@@ -59,24 +53,19 @@ This is an API for a social network web application where users can share their 
 
 ## Usage
 
-#### How to use the application:
+#### Utilizing this API enables users to establish a new user profile using a valid username and email. Additionally, users can connect with other individuals, share their own "thoughts," respond with "reactions" to thoughts, update and delete both thoughts and reactions, and remove connections with friends.
 
 - First, make sure to install the given application following the previous steps and video walkthrough. 
 
--  Next, confirm if the tables were created and the database was seeded on MySQL Workbench.
-    - Navigate to MySQL Workbench app, click Schemas and the database name `Ecommerce` for the application. 
-    - Click the tables, and the following models and requirements will be displayed when the commands are run:
-        
-        - `SELECT * FROM ecommerce.category`
-        - `SELECT * FROM ecommerce.product`
-        - `SELECT * FROM ecommerce.product_tag`
-        - `SELECT * FROM ecommerce.tag`
+-  Next, this app uses MongoDB and a NoSQL database, that allows the website to handle large amounts of data.
+    - Navigate to NoSQL app like MongoDB Compass, make sure you are connected to the the URI: `mongodb://localhost:27017` 
+    - The `social-network-app` will be available to view and edit
 
 - Then, using `Insomnia` or `Postman`, test the application's CRUD commands:
-    -  Using the API GET routes for categories, products, or tags, the data for each of these routes will be displayed. 
-    - When the user clicks the `GET` request for `ALL` categories, products, or tags, then they are presented with all the data according to each route. 
-    - When the user clicks the `GET` request for a `SINGLE` category, product, or tag ID, then they are presented with data for the appropriate ID of each route folder. 
-    - When the user tests the `POST`, `PUT`, or `DELETE` API routes for categories, products, or tags, then they are able to `create`, `update`, or `delete` data within each route folder. 
+    -  Using the API GET routes for Users, Friends, or Thoughts, the data for each of these routes will be displayed. 
+    - When the user clicks the `GET` request for `ALL` Users or Thoughts, then they are presented with all the data according to each route. 
+    - When the user clicks the `GET` request for a `SINGLE` User or Thought id, then they are presented with data for the appropriate ID of each route folder. 
+    - When the user tests the `POST`, `PUT`, or `DELETE` API routes for Users, Friends, or Thoughts, then they are able to `create`, `update`, or `delete` data using the corresponding `:_id` within each route folder. 
 
 
 ## Dependencies
