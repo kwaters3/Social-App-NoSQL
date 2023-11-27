@@ -63,7 +63,7 @@ This is an API for a social network web application where users can share their 
 
 - First, make sure to install the given application following the previous steps and video walkthrough. 
 
--  Next, confirm if the tables were created and the database was seeded.on MySQL Workbench.
+-  Next, confirm if the tables were created and the database was seeded on MySQL Workbench.
     - Navigate to MySQL Workbench app, click Schemas and the database name `Ecommerce` for the application. 
     - Click the tables, and the following models and requirements will be displayed when the commands are run:
         
@@ -112,10 +112,6 @@ This is an API for a social network web application where users can share their 
       - Get thought by ID: `GET /api/thoughts/:thoughtId`
       - Update a thought: `PUT /api/thoughts/:thoughtId`
       - Delete a thought: `DELETE /api/thoughts/:thoughtId`
-
-    - `REACTION`
-      - Add a reaction: `PUT /api/thoughts/:id/reactions`
-      - Delete a reaction: `DELETE /api/thoughts/:id/reactions`
 
 
 ## License
