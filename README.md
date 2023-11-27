@@ -25,7 +25,7 @@ This is an API for a social network web application where users can share their 
 
 #### Click on the image below to reveal the video walk-through of the `friend-route, thoughts-route, & reaction-route` process:
 
-[![Screenshot](./assets/images/friend.gif)](https://www.youtube.com/watch?v=L8QiW-QJldk)
+[![Screenshot](./assets/images/friend.gif)](https://youtu.be/QnFgKGAjISk)
 
 
 
